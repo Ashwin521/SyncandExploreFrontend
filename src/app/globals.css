@@ -1,15 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #88E1E5;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +15,30 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.font-sans {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar for modern look */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e6fafd;
+}
+::-webkit-scrollbar-thumb {
+  background: #1bb6c7;
+  border-radius: 8px;
+}
+
+/* Button hover and focus states */
+button:focus {
+  outline: 2px solid #1bb6c7;
+  outline-offset: 2px;
+}
+
+input:focus {
+  outline: 2px solid #1bb6c7;
+  outline-offset: 2px;
 }
