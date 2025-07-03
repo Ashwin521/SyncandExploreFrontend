@@ -28,7 +28,7 @@ export default function Home() {
       </div>
       
       {/* Testimonials Section */}
-      <div className={styles.sectionContainer}>
+      <div className={styles.sectionContainer} style={{backgroundColor: '#FFFFFF'}}>
         <TestimonialsSection />
       </div>
       
