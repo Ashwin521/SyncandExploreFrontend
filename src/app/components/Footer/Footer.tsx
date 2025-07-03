@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
       <div className={styles.logoRow}>
         <Image src="/globe.svg" alt="Logo" width={32} height={32} />
-        <span className="font-bold text-lg">Sync & Explore</span>
+        <span className={styles.logoText}>Sync & Explore</span>
       </div>
       <p className={styles.copyright}>Copyright © Sync&Explore. All right reserved</p>
     </footer>

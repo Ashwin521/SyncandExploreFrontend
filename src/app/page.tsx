@@ -21,10 +21,26 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
       </section>
-      <WhySection />
-      <TestimonialsSection />
-      <WaitlistSection />
-      <Footer />
+      
+      {/* Why Section */}
+      <div className={styles.sectionContainer}>
+        <WhySection />
+      </div>
+      
+      {/* Testimonials Section */}
+      <div className={styles.sectionContainer}>
+        <TestimonialsSection />
+      </div>
+      
+      {/* Waitlist Section */}
+      <div className={styles.sectionContainer}>
+        <WaitlistSection />
+      </div>
+      
+      {/* Footer Section */}
+      <div className={styles.sectionContainer}>
+        <Footer />
+      </div>
     </div>
   );
 }

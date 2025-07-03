@@ -5,22 +5,67 @@ export default function WhySection() {
   return (
     <section id="features" className={styles.whySection}>
       <h2 className={styles.title}>Why Sync & Explore?</h2>
+      
+      <div className={styles.airplanePath}>
+        <Image
+          src="/vector.png" 
+          alt="Airplane"
+          fill
+          className={styles.airplane}
+        />
+      </div>
+      
       <div className={styles.cards}>
         <div className={styles.card}>
-          <Image src="/file.svg" alt="Sync Travel Dates" width={40} height={40} className={styles.cardIcon} />
-          <span className={styles.cardTitle}>Sync Travel Dates</span>
+          <h3 className={styles.cardTitle}>Sync<br />Travel Dates</h3>
+          <div className={styles.cardIconWrapper}>
+            <Image 
+              src="/calendar.png" 
+              alt="Calendar Icon" 
+              width={48} 
+              height={48} 
+              className={styles.cardIcon} 
+            />
+          </div>
         </div>
+        
         <div className={styles.card}>
-          <Image src="/globe.svg" alt="Explore Destinations" width={40} height={40} className={styles.cardIcon} />
-          <span className={styles.cardTitle}>Explore Destinations</span>
+          <h3 className={styles.cardTitle}>Explore<br />Destinations</h3>
+          <div className={styles.cardIconWrapper}>
+            <Image 
+              src="/worldmap.png" 
+              alt="Globe Icon" 
+              width={48} 
+              height={48} 
+              className={styles.cardIcon} 
+            />
+          </div>
         </div>
+        
         <div className={styles.card}>
-          <Image src="/next.svg" alt="Find Travel Buddies" width={40} height={40} className={styles.cardIcon} />
-          <span className={styles.cardTitle}>Find Travel Buddies</span>
+          <h3 className={styles.cardTitle}>Find Travel<br />Buddies</h3>
+          <div className={styles.cardIconWrapper}>
+            <Image 
+              src="/travelbag.png" 
+              alt="User Icon" 
+              width={48} 
+              height={48} 
+              className={styles.cardIcon} 
+            />
+          </div>
         </div>
+        
         <div className={styles.card}>
-          <Image src="/vercel.svg" alt="Affordable Stays" width={40} height={40} className={styles.cardIcon} />
-          <span className={styles.cardTitle}>Affordable Stays</span>
+          <h3 className={styles.cardTitle}>Affordable<br />Stays</h3>
+          <div className={styles.cardIconWrapper}>
+            <Image 
+              src="/stay_home.png" 
+              alt="House Icon" 
+              width={48} 
+              height={48} 
+              className={styles.cardIcon} 
+            />
+          </div>
         </div>
       </div>
     </section>

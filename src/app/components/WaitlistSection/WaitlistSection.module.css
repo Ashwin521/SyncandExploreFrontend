@@ -1,11 +1,10 @@
 .waitlistSection {
   width: 100%;
-  max-width: 1200px;
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   border-radius: 1.5rem;
   padding: 3rem 2rem;
+  margin: 2rem 0;
   position: relative;
   overflow: hidden;
   background: #b2f0f7;
@@ -41,6 +40,12 @@
   align-items: center;
   gap: 0.5rem;
   margin-top: 1rem;
+}
+.logoText {
+  color: #1bb6c7;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
 }
 .right {
   flex: 1;

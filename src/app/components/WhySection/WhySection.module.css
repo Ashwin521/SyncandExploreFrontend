@@ -1,94 +1,142 @@
 .whySection {
   width: 100%;
-  max-width: 1200px;
-  margin-top: 3rem;
+  max-width: 1300px;
+  padding: 4rem 4rem;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
+  position: relative;
+  background-image: linear-gradient(#88E1E5,#FFFFFF);
 }
-@media (min-width: 768px) {
-  .whySection {
-    margin-top: 4rem;
-    padding: 0 2rem;
-  }
-}
+
 .title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #171717;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 3.5rem;
   text-align: center;
   font-family: 'Nunito', sans-serif;
 }
-@media (min-width: 480px) {
-  .title {
-    font-size: 1.75rem;
-  }
+
+.airplanePath {
+  position: absolute;
+  top: 8.5em;
+  left: 0;
+  width: 37%;
+  height: 60px;
+  z-index: 1;
 }
-@media (min-width: 768px) {
-  .title {
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
-  }
+
+.dottedLine {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 15%;
+  height: 2px;
+  background-image: radial-gradient(circle, #000 1px, transparent 1px);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  transform: translateY(-50%);
 }
+
+.airplane {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
 @media (min-width: 1024px) {
   .title {
     font-size: 2.5rem;
   }
-}
-.cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 300px;
-}
-@media (min-width: 640px) {
+  
   .cards {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 600px;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
 }
-@media (min-width: 1024px) {
+
+@media (max-width: 767px) {
+  .whySection {
+    padding: 1.5rem 0;
+  }
+  
   .cards {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 900px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .airplanePath {
+    top: 5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .whySection {
+    padding: 1rem 0;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card {
-  background: #1bb6c7;
+  background-color: #178C95;
   color: #fff;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(27,182,199,0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%;
+  position: relative;
+  transition: transform 0.2s;
 }
-@media (min-width: 768px) {
-  .card {
-    padding: 2rem;
-  }
-}
+
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(27,182,199,0.15);
+  transform: translateY(-5px);
 }
+
+.cardIconWrapper {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cardIcon {
-  margin-bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
 }
+
 .cardTitle {
   font-weight: 600;
-  font-size: 1rem;
-  font-family: 'Nunito Sans', Arial, sans-serif;
-}
-@media (min-width: 768px) {
-  .cardTitle {
-    font-size: 1.125rem;
-  }
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
 }

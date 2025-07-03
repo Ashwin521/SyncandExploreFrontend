@@ -9,7 +9,7 @@ export default function WaitlistSection() {
         <p className={styles.subtitle}>Get early access to exclusive AI-powered features.</p>
         <div className={styles.logoRow}>
           <Image src="/globe.svg" alt="Logo" width={48} height={48} />
-          <span style={{ color: "#1bb6c7", fontWeight: 700, fontSize: "1.25rem", marginLeft: "0.5rem" }}>Sync & Explore</span>
+          <span className={styles.logoText}>Sync & Explore</span>
         </div>
       </div>
       <div className={styles.right}>

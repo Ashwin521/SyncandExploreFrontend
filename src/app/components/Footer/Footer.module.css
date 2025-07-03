@@ -1,14 +1,12 @@
 .footer {
   width: 100%;
   background: #1bb6c7;
-  margin-top: 4rem;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #fff;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+  border-radius: 1rem;
 }
 .links {
   display: flex;
@@ -34,6 +32,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.logoText {
+  font-weight: 700;
+  font-size: 1.125rem;
 }
 .copyright {
   margin-top: 0.5rem;
