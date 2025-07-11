@@ -28,15 +28,15 @@ export default function WaitlistSection() {
         <p className={styles.subtitle}>Get early access to exclusive AI-powered features.</p>
         
         <Image 
-          src="/vector.png" 
+          src="/vector.svg" 
           alt="Airplane" 
-          width={80} 
-          height={80} 
+          width={100} 
+          height={100} 
           className={styles.airplane} 
         />
         
         <div className={styles.logoRow}>
-          <Image src="/logo.png" alt="logo" width={48} height={48} />
+          <Image src="/logo.svg" alt="logo" width={450} height={320} />
         </div>
       </div>
       

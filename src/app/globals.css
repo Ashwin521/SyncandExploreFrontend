@@ -1,44 +1,29 @@
-@import "tailwindcss";
-
-:root {
-  --background: #88E1E5;
-  --foreground: #171717;
+/* Global styles for Next.js app */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
+  color: #333;
+  background: #ffffff;
 }
 
-.font-sans {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Custom scrollbar for modern look */
-::-webkit-scrollbar {
-  width: 8px;
-  background: #e6fafd;
-}
-::-webkit-scrollbar-thumb {
-  background: #1bb6c7;
-  border-radius: 8px;
-}
-
-/* Button hover and focus states */
-button:focus {
-  outline: 2px solid #1bb6c7;
-  outline-offset: 2px;
-}
-
-input:focus {
-  outline: 2px solid #1bb6c7;
-  outline-offset: 2px;
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }
