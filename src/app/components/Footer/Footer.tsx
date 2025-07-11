@@ -12,14 +12,41 @@ export default function Footer() {
         <a href="#">Join Us</a>
       </div>
       <div className={styles.icons}>
-        <span>✉️</span>
-        <span>🌐</span>
-        <span>📞</span>
-        <span>📍</span>
-      </div>
-      <div className={styles.logoRow}>
-        <Image src="/globe.svg" alt="Logo" width={32} height={32} />
-        <span className={styles.logoText}>Sync & Explore</span>
+        <Image 
+          src="/mail_icon.svg" 
+          alt="Email" 
+          width={28} 
+          height={28}
+          className={styles.icon}
+        />
+        <Image 
+          src="/calender_icon.svg" 
+          alt="Calendar" 
+          width={28} 
+          height={28}
+          className={styles.icon}
+        />
+        <Image 
+          src="/message_icon.svg" 
+          alt="Message" 
+          width={28} 
+          height={28}
+          className={styles.icon}
+        />
+        <Image 
+          src="/security_icon.svg" 
+          alt="Security" 
+          width={28} 
+          height={28}
+          className={styles.icon}
+        />
+        <Image 
+          src="/timer_icon.svg" 
+          alt="Timer" 
+          width={28} 
+          height={28}
+          className={styles.icon}
+        />
       </div>
       <p className={styles.copyright}>Copyright © Sync&Explore. All right reserved</p>
     </footer>

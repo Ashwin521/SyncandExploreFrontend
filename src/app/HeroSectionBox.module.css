@@ -78,7 +78,7 @@
   }
 }
 .pageBackground {
-  background: #6DDADF;
+  background-image: linear-gradient(#6DDADF,#FFFFFF);
   min-height: 100vh;
   width: 100%;
   display: flex;
