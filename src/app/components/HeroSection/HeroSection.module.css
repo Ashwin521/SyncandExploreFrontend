@@ -1,0 +1,145 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    padding: 1.5rem 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 3rem 3rem;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+@media (max-width: 600px) {
+  .left {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+}
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Nurito, sans-serif;
+  color: #171717;
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.35em;
+  }
+  .subtitle {
+    font-size: 1em;
+  }
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.6em 1em;
+  }
+}
+.subtitle {
+  font-size: 1em;
+  color: #757575;
+  max-width: 36rem;
+  font-weight: 400;
+  font-family: Nunito Sans, Arial, sans-serif;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 2rem;
+  }
+}
+.buttonRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .buttonRow {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+}
+@media (max-width: 600px) {
+  .buttonRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+  }
+}
+.primaryBtn {
+  background: #1A8F98;
+  color: #fff;
+  padding: 0.75em 3.3em;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0 0.125em 0.5em rgba(27,182,199,0.08);
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .primaryBtn {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.6em 1em;
+  }
+}
+.primaryBtn:hover {
+  background: #1599a8;
+}
+.secondaryBtn {
+  background: #fff;
+  color: #1bb6c7;
+  border: 2px solid #1bb6c7;
+  padding: 0.75em 2em;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .secondaryBtn {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.6em 1em;
+  }
+}
+.secondaryBtn:hover {
+  background: #e6fafd;
+}

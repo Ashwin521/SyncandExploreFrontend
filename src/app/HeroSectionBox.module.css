@@ -1,0 +1,125 @@
+.heroSectionBox {
+  width: 100%;
+  max-width: 1300px;
+  background: #fff;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 32px rgba(27,182,199,0.10);
+  padding: 2rem 2rem 0 2rem;
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .heroSectionBox {
+    max-width: 98vw;
+    padding: 1.2rem 0.2rem 0 0.2rem;
+  }
+  
+  .sectionContainer,
+  .footerBox {
+    max-width: 98vw;
+  }
+  
+  .sectionContainer {
+    padding: 0;
+  }
+  
+  .footerBox {
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 900px) {
+  .heroSectionBox {
+    padding: 1.2rem 0.1rem 0 0.1rem;
+  }
+  
+  .sectionContainer,
+  .footerBox {
+    padding: 1.2rem 0.5rem;
+  }
+  
+  .sectionContainer {
+    padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  .heroSectionBox {
+    padding: 0.8rem 0.05rem 0 0.05rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  
+  .sectionContainer,
+  .footerBox {
+    padding: 1rem 0.5rem;
+  }
+  
+  .sectionContainer {
+    padding: 0;
+  }
+  
+  .footerBox {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+.logoPosition {
+  position: absolute;
+  left: 4rem;
+  top: 3rem;
+  z-index: 20;
+}
+@media (max-width: 900px) {
+  .logoPosition {
+    left: 1rem;
+    top: 2rem;
+  }
+}
+.pageBackground {
+  background-image: linear-gradient(#6DDADF,#FFFFFF);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+}
+
+.heroSectionBox {
+  width: 100%;
+  max-width: 1300px;
+  background: #fff;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 32px rgba(27,182,199,0.10);
+  padding: 2rem 2rem 0 2rem;
+  position: relative;
+}
+
+.sectionContainer {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+}
+
+.footerBox {
+  width: 100%;
+  max-width: 1300px;
+  background: #fff;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 32px rgba(27,182,199,0.10);
+  padding: 2rem;
+  position: relative;
+}

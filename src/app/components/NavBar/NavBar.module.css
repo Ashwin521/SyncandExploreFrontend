@@ -1,0 +1,132 @@
+.navBarWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1000;
+}
+@media (max-width: 700px) {
+  .navBarWrapper {
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+}
+.navList {
+  display: flex;
+  gap: 2.5rem;
+  background: #1A8F98;
+  border-radius: 9999px;
+  padding: 0.75rem 3rem;
+  box-shadow: 0 2px 8px rgba(27,182,199,0.08);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  list-style: none;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+}
+.navList li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+}
+.navList li a:hover {
+  color: #e6fafd;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+.bar {
+  width: 2rem;
+  height: 0.25rem;
+  background: #1A8F98;
+  margin: 0.2rem 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+@media (max-width: 700px) {
+  .navList {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14em;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(27,182,199,0.10);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1.5em 1em 1.5em;
+  animation: slideIn 0.3s;
+}
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #1A8F98;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+.sidebarNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.sidebarNavList li a {
+  color: #1A8F98;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  transition: color 0.2s;
+}
+.sidebarNavList li a:hover {
+  color: #6DDADF;
+}
+@media (max-width: 480px) {
+  .navBarWrapper {
+    margin-bottom: 1rem;
+  }
+  .navList {
+    gap: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.65rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
