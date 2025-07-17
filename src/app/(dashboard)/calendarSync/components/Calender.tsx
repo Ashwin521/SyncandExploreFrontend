@@ -1,7 +1,7 @@
 "use client";
 
 import { useAtom } from "jotai";
-import { selectedDateAtom, calendarPopupAtom } from "../atoms/dateAtom";
+import { selectedDateAtom, calendarPopupAtom } from "./dateAtom";
 import { useMemo, useState } from "react";
 
 function formatDate(date: Date) {
@@ -62,7 +62,8 @@ export function Calendar({ cardId }: CalendarComponentProps) {
 
   const goToPrevMonth = () => {
     const firstDayOfSelected = new Date(currentYear, currentMonth, 1);
-    if (firstDayOfSelected < new Date(today.getFullYear(), today.getMonth(), 1)) return;
+    if (firstDayOfSelected < new Date(today.getFullYear(), today.getMonth(), 1))
+      return;
 
     if (currentMonth === 0) {
       setCurrentMonth(11);
@@ -92,7 +93,11 @@ export function Calendar({ cardId }: CalendarComponentProps) {
             className={`w-5 h-5 flex items-center justify-center text-[9px] cursor-pointer rounded-full
               ${isPast ? "text-gray-400 cursor-not-allowed" : ""}
               ${!isPast && isSelected ? "bg-[#1A9DA6] text-white" : ""}
-              ${!isPast && !isSelected && isToday ? "border border-[#1A9DA6] text-[#1A9DA6]" : ""}
+              ${
+                !isPast && !isSelected && isToday
+                  ? "border border-[#1A9DA6] text-[#1A9DA6]"
+                  : ""
+              }
               ${!isPast && !isSelected && !isToday ? "text-gray-700" : ""}
             `}
           >
@@ -117,9 +122,13 @@ export function Calendar({ cardId }: CalendarComponentProps) {
         <div className="flex items-center justify-between w-full mb-1">
           <button
             onClick={goToPrevMonth}
-            disabled={currentMonth === today.getMonth() && currentYear === today.getFullYear()}
+            disabled={
+              currentMonth === today.getMonth() &&
+              currentYear === today.getFullYear()
+            }
             className={`font-bold px-1 text-xs ${
-              currentMonth === today.getMonth() && currentYear === today.getFullYear()
+              currentMonth === today.getMonth() &&
+              currentYear === today.getFullYear()
                 ? "text-gray-300 cursor-not-allowed"
                 : "text-[#1A9DA6]"
             }`}

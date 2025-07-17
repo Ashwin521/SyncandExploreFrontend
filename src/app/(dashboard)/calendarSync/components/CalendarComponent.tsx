@@ -2,7 +2,7 @@
 
 import { useAtom } from "jotai";
 import { FaCalendarAlt } from "react-icons/fa";
-import { calendarPopupAtom } from "../atoms/dateAtom";
+import { calendarPopupAtom } from "./dateAtom";
 import { Calendar } from "./Calender";
 
 interface CalendarButtonProps {

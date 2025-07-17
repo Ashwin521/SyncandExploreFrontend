@@ -3,17 +3,13 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import { useAtom, useSetAtom } from "jotai";
-import { 
-    userNameAtom ,
-    userRoleAtom,
-    userAvatarAtom,
-} from "../atoms/userAtom";
+import { userNameAtom, userRoleAtom, userAvatarAtom } from "./userAtom";
 
 const getUserInfo = async () => {
   return {
     name: "Sam-yuk",
     role: "Traveller",
-    avatar: "/file.svg", 
+    avatar: "/file.svg",
   };
 };
 

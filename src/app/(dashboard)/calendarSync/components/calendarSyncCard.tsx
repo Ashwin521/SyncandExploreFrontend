@@ -8,7 +8,11 @@ interface CalendarSyncCardProps {
   cardId: string;
 }
 
-export function CalendarSyncCard({ destination, imageSrc, cardId }: CalendarSyncCardProps) {
+export function CalendarSyncCard({
+  destination,
+  imageSrc,
+  cardId,
+}: CalendarSyncCardProps) {
   return (
     <div className="w-full sm:max-w-[333px] bg-[#FAFAFA] border border-[#1A8F98] rounded-[24px] p-3 sm:p-4 flex flex-col justify-between">
       <div className="relative w-full h-[180px] sm:h-[200px] rounded-[14px] overflow-hidden">

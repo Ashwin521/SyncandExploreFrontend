@@ -1,14 +1,11 @@
-"use client"
+"use client";
 const LogoutHandler = () => {
-
-  const handleLogout = () => {
-
-  };
+  const handleLogout = () => {};
 
   return (
     <div
       onClick={handleLogout}
-      className="flex items-center gap-2 text-[#1A8F98] font-bold text-[15px] cursor-pointer px-4 py-4 mt-4 hover:bg-[#E6F5F6] transition-colors rounded-md"
+      className="flex items-center gap-2 text-[#1A8F98] font-bold text-[15px] cursor-pointer px-4 py-4  hover:bg-[#E6F5F6] transition-colors rounded-md"
     >
       <svg
         width="20"
