@@ -1,0 +1,97 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20em;
+  margin-top: 3em;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .container {
+    align-items: flex-end;
+    margin-top: 0;
+  }
+}
+.imageGroup {
+  position: relative;
+  width: 90vw;
+  max-width: 28em;
+  height: auto;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.topImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-radius: 1.5em;
+  border: 0.5em solid #7ee0f3;
+  overflow: hidden;
+  width: 53.5%;
+  height: 58%;
+  box-shadow: 0 0.125em 0.75em rgba(27,182,199,0.10);
+}
+.bottomImage {
+  position: absolute;
+  left: 28.5%;
+  top: 28.5%;
+  border-radius: 1.5em;
+  border: 0.5em solid #7ee0f3;
+  overflow: hidden;
+  width: 53.5%;
+  height: 58%;
+  box-shadow: 0 0.125em 0.75em rgba(27,182,199,0.10);
+  z-index: 15;
+}
+.calendarIconWrap {
+  position: absolute;
+  left: -9%;
+  bottom: 25%;
+  width: 21.5%;
+  height: 21.5%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.calendarIcon {
+  width: 66%;
+  height: 66%;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+@media (max-width: 1024px) {
+  .imageGroup {
+    width: 80vw;
+    max-width: 24em;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageGroup {
+    width: 85vw;
+    max-width: 22em;
+  }
+}
+
+@media (max-width: 600px) {
+  .imageGroup {
+    width: 90vw;
+    max-width: 18em;
+  }
+  .topImage,
+  .bottomImage {
+    border-width: 0.3em;
+    border-radius: 1em;
+  }
+}
