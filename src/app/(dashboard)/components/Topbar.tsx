@@ -3,7 +3,7 @@ import { useAtom } from "jotai";
 import { useState } from "react";
 import { Bell, Search } from "lucide-react";
 import axios from "axios";
-import { searchQueryAtom, searchResultsAtom } from "../atoms/searchAtom";
+import { searchQueryAtom, searchResultsAtom } from "./searchAtom";
 
 export default function TopBar() {
   const [query, setQuery] = useAtom(searchQueryAtom);
@@ -17,10 +17,9 @@ export default function TopBar() {
     if (!query.trim()) return;
 
     try {
-      const response = await axios.get(
-        `${backendUrl}/search`,
-        { params: { query } }
-      );
+      const response = await axios.get(`${backendUrl}/search`, {
+        params: { query },
+      });
       setResults(response.data.results || []);
     } catch (err) {
       console.error("Search failed:", err);

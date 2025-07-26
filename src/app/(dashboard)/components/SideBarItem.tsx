@@ -5,7 +5,12 @@ type SidebarItemProps = {
   onClick?: () => void;
 };
 
-export function SidebarItem({ icon, label, activeLabel, onClick }: SidebarItemProps) {
+export function SidebarItem({
+  icon,
+  label,
+  activeLabel,
+  onClick,
+}: SidebarItemProps) {
   const isActive = label === activeLabel;
 
   return (
@@ -18,11 +23,16 @@ export function SidebarItem({ icon, label, activeLabel, onClick }: SidebarItemPr
             : "text-[#4B4B4B] hover:bg-gradient-to-r from-[#CFFDFF] to-[#FFFFFF]"
         }`}
     >
-      <span className={`text-[16px] [&>svg]:fill-current ${
-        isActive ? 'text-white' : 'text-[#4B4B4B]'
-      }`}>
+      {/* Icon */}
+      <span
+        className={`w-5 h-5 [&>svg]:w-full [&>svg]:h-full [&>svg]:fill-current ${
+          isActive ? "text-white" : "text-[#4B4B4B]"
+        }`}
+      >
         {icon}
       </span>
+
+      {/* Label */}
       <span className="text-[15px] whitespace-nowrap overflow-hidden text-ellipsis">
         {label}
       </span>

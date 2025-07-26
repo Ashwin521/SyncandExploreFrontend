@@ -7,8 +7,7 @@ interface OuterCardProps {
 
 export function OuterCard({ children }: OuterCardProps) {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-[#6FCED2] to-[#CFFDFF] flex justify-center items-center px-0 py-0 relative overflow-hidden">
-      
+    <div className="w-full h-screen bg-gradient-to-b from-[#6FCED2] to-[#CFFDFF] flex justify-center items-center p-12 relative overflow-hidden">
       {/* Top-left Aeroplane SVG */}
       <Image
         src="/decor/aeroplane1.svg"
@@ -26,7 +25,7 @@ export function OuterCard({ children }: OuterCardProps) {
         height={80}
         className="absolute bottom-[300px] right-[1px] z-0"
       />
-        <Image
+      <Image
         src="/decor/aeroplane2.svg"
         alt="calendar"
         width={160}
