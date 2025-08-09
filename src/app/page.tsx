@@ -1,4 +1,3 @@
-
 import Logo from "./(landing-page)/Logo";
 import NavBar from "./(landing-page)/NavBar";
 import HeroSection from "./(landing-page)/HeroSection";
