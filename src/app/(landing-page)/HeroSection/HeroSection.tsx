@@ -16,7 +16,9 @@ export default function HeroSection() {
           <Link href="/login">
             <button className={styles.primaryBtn}>Join waitlist</button>
           </Link>
+          <Link href='#'>
           <button className={styles.secondaryBtn}>See how it works</button>
+          </Link>
         </div>
       </div>
       <HeroImages />
