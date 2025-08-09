@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function LoginHeader() {
+export default function LoginHeader({ subtitle = "Login Now" }: { subtitle?: string }) {
   return (
     <div className="mb-8">
       {/* Airplane vector with dotted line trail */}
@@ -13,7 +13,7 @@ export default function LoginHeader() {
           Sync & Explore
         </h1>
         <p className="mt-5 text-[0.55em] font-extrabold uppercase tracking-wider text-white">
-          Login Now
+          {subtitle}
         </p>
       </div>
     </div>

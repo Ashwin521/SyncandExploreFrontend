@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -76,9 +77,7 @@ export default function LoginForm() {
 
         {/* Forgot Password */}
         <div className="mb-2 flex justify-end">
-          <a href="#" className="text-xs text-white hover:text-white/70">
-            Forgot your password?
-          </a>
+          <Link href="/forgot-password" className="text-xs text-white hover:text-white/70">Forgot your password?</Link>
         </div>
 
         {/* Login Button */}
@@ -112,7 +111,7 @@ export default function LoginForm() {
         {/* Sign Up Link */}
         <p className="mt-4 text-center text-sm text-white/70">
           Not a user ?{" "}
-          <a href="#" className="font-semibold text-white underline">
+          <a href="/signup" className="font-semibold text-white underline">
             Sign Up
           </a>
         </p>
