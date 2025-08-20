@@ -1,11 +1,10 @@
-
-import Logo from "./components/Logo/Logo";
-import NavBar from "./components/NavBar/NavBar";
-import HeroSection from "./components/HeroSection/HeroSection";
-import WhySection from "./components/WhySection/WhySection";
-import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection";
-import WaitlistSection from "./components/WaitlistSection/WaitlistSection";
-import Footer from "./components/Footer/Footer";
+import Logo from "./(landing-page)/Logo";
+import NavBar from "./(landing-page)/NavBar";
+import HeroSection from "./(landing-page)/HeroSection";
+import WhySection from "./(landing-page)/WhySection";
+import TestimonialsSection from "./(landing-page)/TestimonialsSection";
+import WaitlistSection from "./(landing-page)/WaitlistSection";
+import Footer from "./(landing-page)/Footer";
 import styles from "./HeroSectionBox.module.css";
 
 export default function Home() {

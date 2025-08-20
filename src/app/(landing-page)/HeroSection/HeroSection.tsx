@@ -1,5 +1,6 @@
 import HeroImages from "../HeroImages/HeroImages";
 import styles from "./HeroSection.module.css";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -12,8 +13,12 @@ export default function HeroSection() {
           AI-powered travel buddy matching<br /> and itinerary planning — so you travel smart, not hard.
         </p>
         <div className={styles.buttonRow}>
-          <button className={styles.primaryBtn}>Join waitlist</button>
+          <Link href="/login">
+            <button className={styles.primaryBtn}>Join waitlist</button>
+          </Link>
+          <Link href='#'>
           <button className={styles.secondaryBtn}>See how it works</button>
+          </Link>
         </div>
       </div>
       <HeroImages />
