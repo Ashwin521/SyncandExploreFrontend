@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 export default function SignupForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -49,14 +50,18 @@ export default function SignupForm() {
                 "linear-gradient(135deg, rgba(30,30,40,0.20) 0%, rgba(30,30,40,0.10) 100%)",
             }}
           />
-          <button
+            <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-3 top-4 text-white/60 hover:text-white/80"
             aria-label={showPassword ? "Hide password" : "Show password"}
-          >
-            <Image src="/eye-off.svg" alt={showPassword ? "Hide password" : "Show password"} width={18} height={18} />
-          </button>
+            >
+            {showPassword ? (
+              <AiOutlineEyeInvisible size={18} />
+            ) : (
+              <AiOutlineEye size={18} />
+            )}
+            </button>
         </div>
         {/* Confirm Password Field */}
         <div className="relative mt-8">
@@ -77,14 +82,18 @@ export default function SignupForm() {
                 "linear-gradient(135deg, rgba(30,30,40,0.20) 0%, rgba(30,30,40,0.10) 100%)",
             }}
           />
-          <button
+            <button
             type="button"
             onClick={() => setShowConfirmPassword(!showConfirmPassword)}
             className="absolute right-3 top-4 text-white/60 hover:text-white/80"
             aria-label={showConfirmPassword ? "Hide confirm password" : "Show confirm password"}
-          >
-            <Image src="/eye-off.svg" alt={showConfirmPassword ? "Hide confirm password" : "Show confirm password"} width={18} height={18} />
-          </button>
+            >
+            {showConfirmPassword ? (
+              <AiOutlineEyeInvisible size={18} />
+            ) : (
+              <AiOutlineEye size={18} />
+            )}
+            </button>
         </div>
         {/* Signup Button */}
         <button
