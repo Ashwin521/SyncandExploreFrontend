@@ -4,9 +4,28 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
+import axios from "axios";
+
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = async () => {
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL!
+      const response = await axios.post(`${apiUrl}/api/auth/login`, {
+        email,
+        password
+      });
+      // Handle successful login
+      console.log('Login successful:', response.data);
+    } catch (error) {
+      // Handle login error
+      console.error('Login failed:', error);
+    }
+  };
 
   return (
     <div className="w-full max-w-sm">
@@ -14,11 +33,12 @@ export default function LoginForm() {
         className="flex flex-col gap-4"
         onSubmit={(e) => {
           e.preventDefault();
+          handleLogin();
         }}
       >
         {/* Email Field */}
         <div className="relative">
-          <label className="absolute left-4 top-[-8] text-xs font-medium text-white bg-[#717D72] z-[100]">
+          <label className="absolute left-4 top-[-8px] text-xs font-medium text-white bg-[#717D72] z-[100]">
             Email Id
           </label>
           <div className="absolute left-4 top-4 flex items-center">
@@ -28,6 +48,8 @@ export default function LoginForm() {
             id="email"
             name="email"
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             autoComplete="email"
             className="w-full rounded-lg border border-white/30 bg-black/50 px-8 pb-1.5 pt-3 text-white placeholder-white/50 backdrop-blur-[16px] outline-none transition focus:border-white/60 focus:text-white text-sm shadow-lg autofill:bg-black/50 autofill:text-white"
@@ -40,7 +62,7 @@ export default function LoginForm() {
 
         {/* Password Field */}
         <div className="relative mt-8">
-          <label className="absolute left-4 top-[-8] text-xs font-medium text-white bg-[#717D72] z-[100]">
+          <label className="absolute left-4 top-[-8px] text-xs font-medium text-white bg-[#717D72] z-[100]">
             Password
           </label>
           <div className="absolute left-4 top-4 flex items-center">
@@ -56,6 +78,8 @@ export default function LoginForm() {
             name="password"
             type={showPassword ? "text" : "password"}
             required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             className="w-full rounded-lg border border-white/30 bg-black/50 px-8 pb-1.5 pt-3 text-white placeholder-white/50 backdrop-blur-[16px] outline-none transition focus:border-white/60 focus:text-white text-sm shadow-lg autofill:bg-black/50 autofill:text-white"
             style={{
               background:
@@ -78,7 +102,9 @@ export default function LoginForm() {
 
         {/* Forgot Password */}
         <div className="mb-2 flex justify-end">
-          <Link href="/forgot-password" className="text-xs text-white hover:text-white/70">Forgot your password?</Link>
+          <Link href="/forgot-password" className="text-xs text-white hover:text-white/70">
+            Forgot your password?
+          </Link>
         </div>
 
         {/* Login Button */}
@@ -112,9 +138,9 @@ export default function LoginForm() {
         {/* Sign Up Link */}
         <p className="mt-4 text-center text-sm text-white/70">
           Not a user ?{" "}
-          <a href="/signup" className="font-semibold text-white underline">
+          <Link href="/signup" className="font-semibold text-white underline">
             Sign Up
-          </a>
+          </Link>
         </p>
       </form>
     </div>
