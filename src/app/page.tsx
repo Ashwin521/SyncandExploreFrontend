@@ -7,6 +7,8 @@ import WaitlistSection from "./(landing-page)/WaitlistSection";
 import Footer from "./(landing-page)/Footer";
 import styles from "./HeroSectionBox.module.css";
 
+//noone
+
 export default function Home() {
   return (
     <div className={styles.pageBackground}>
