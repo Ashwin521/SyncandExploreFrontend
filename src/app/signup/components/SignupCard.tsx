@@ -34,7 +34,7 @@ export default function SignupCard() {
               "linear-gradient(135deg, rgba(30,30,40,0.20) 0%, rgba(30,30,40,0.10) 100%)",
           }}
         >
-          <Image src="/Google 2.svg" alt="Google" width={24} height={24} />
+          <Image src="/google2.svg" alt="Google" width={24} height={24} />
           <span className="font-medium">Continue with Google</span>
         </button>
         {/* Already a user? Login */}

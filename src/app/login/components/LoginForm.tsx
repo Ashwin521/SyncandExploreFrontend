@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 import axios from "axios";
+
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -91,9 +93,9 @@ export default function LoginForm() {
             aria-label={showPassword ? "Hide password" : "Show password"}
           >
             {showPassword ? (
-              <Image src="/eye-off.svg" alt="Hide password" width={18} height={18} />
+              <AiOutlineEye size={18} aria-label="Hide password" />
             ) : (
-              <Image src="/eye.svg" alt="Show password" width={18} height={18} />
+              <AiOutlineEyeInvisible size={18} aria-label="Show password" />
             )}
           </button>
         </div>
@@ -129,7 +131,7 @@ export default function LoginForm() {
               "linear-gradient(135deg, rgba(30,30,40,0.20) 0%, rgba(30,30,40,0.10) 100%)",
           }}
         >
-          <Image src="/Google 2.svg" alt="Google" width={24} height={24} />
+          <Image src="/google2.svg" alt="Google" width={24} height={24} />
           <span className="font-medium">Continue with Google</span>
         </button>
 
