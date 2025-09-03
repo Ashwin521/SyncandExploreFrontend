@@ -28,7 +28,7 @@ export default function WaitlistSection() {
         <p className={styles.subtitle}>Get early access to exclusive AI-powered features.</p>
         
         <Image 
-          src="/vector.svg" 
+          src="/Vector.svg" 
           alt="Airplane" 
           width={100} 
           height={100} 
