@@ -8,7 +8,7 @@ export default function WhySection() {
       
       <div className={styles.airplanePath}>
         <Image
-          src="/vector.png" 
+          src="/Vector.svg" 
           alt="Airplane"
           fill
           className={styles.airplane}
