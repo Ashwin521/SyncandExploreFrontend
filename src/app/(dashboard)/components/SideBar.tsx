@@ -6,17 +6,7 @@ import { UserInfo } from "./UserInfo";
 import { SidebarItem } from "./SideBarItem";
 import Image from "next/image";
 
-import dashboard from "../../../../public/sidebar/dashboard.svg";
-import buddies from "../../../../public/sidebar/buddies.svg";
-import trip from "../../../../public/sidebar/trip.svg";
-import calendar from "../../../../public/sidebar/calendar.svg";
-import explore from "../../../../public/sidebar/explore.svg";
-import group from "../../../../public/sidebar/group.svg";
-import user from "../../../../public/sidebar/user.svg";
-import settings from "../../../../public/sidebar/settings.svg";
-import agency from "../../../../public/sidebar/agency.svg";
-import passenger from "../../../../public/sidebar/passenger.svg";
-import suite from "../../../../public/sidebar/suite.svg";
+// SVGs from public folder should be referenced as src strings
 
 interface SideBarProps {
   activeLabel: string;
@@ -32,67 +22,67 @@ export default function Sidebar({ activeLabel }: SideBarProps) {
         <div className="bg-white flex flex-col justify-between rounded-xl m-2 h-full overflow-hidden gap-36">
           <ul className="text-[#4B4B4B] text-[15px] font-[500] pr-3 pt-2">
             <SidebarItem
-              icon={<Image src={dashboard} alt="Dashboard" />}
+              icon={<img src="/sidebar/dashboard.svg" alt="Dashboard" />}
               label="Dashboard"
               onClick={() => router.push("/dashboard")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={trip} alt="Explore Trips" />}
+              icon={<img src="/sidebar/trip.svg" alt="Explore Trips" />}
               label="Explore Trips"
               onClick={() => router.push("/explore-trips")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={agency} alt="My Trips" />}
+              icon={<img src="/sidebar/agency.svg" alt="My Trips" />}
               label="My Trips"
               onClick={() => router.push("/my-trips")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={calendar} alt="Calender Sync" />}
+              icon={<img src="/sidebar/calendar.svg" alt="Calender Sync" />}
               label="Calender Sync"
               onClick={() => router.push("/calendarSync")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={buddies} alt="Travel Buddies" />}
+              icon={<img src="/sidebar/buddies.svg" alt="Travel Buddies" />}
               label="Travel Buddies"
               onClick={() => router.push("/travel-buddies")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={passenger} alt="Budget & Planner" />}
+              icon={<img src="/sidebar/passenger.svg" alt="Budget & Planner" />}
               label="Budget & Planner"
               onClick={() => router.push("/budget-planner")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={suite} alt="Stay Options" />}
+              icon={<img src="/sidebar/suite.svg" alt="Stay Options" />}
               label="Stay Options"
               onClick={() => router.push("/stay-options")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={group} alt="Group & forums" />}
+              icon={<img src="/sidebar/group.svg" alt="Group & forums" />}
               label="Group & forums"
               onClick={() => router.push("/group-forums")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={user} alt="Invite friends" />}
+              icon={<img src="/sidebar/user.svg" alt="Invite friends" />}
               label="Invite friends"
               onClick={() => router.push("/invite-friends")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={settings} alt="Account settings" />}
+              icon={<img src="/sidebar/settings.svg" alt="Account settings" />}
               label="Account settings"
               onClick={() => router.push("/account-settings")}
               activeLabel={activeLabel}
             />
             <SidebarItem
-              icon={<Image src={dashboard} alt="Help & Support" />}
+              icon={<img src="/sidebar/dashboard.svg" alt="Help & Support" />}
               label="Help & Support"
               onClick={() => router.push("/help-support")}
               activeLabel={activeLabel}
