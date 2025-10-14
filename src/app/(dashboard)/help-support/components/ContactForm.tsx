@@ -53,7 +53,7 @@ export default function ContactForm() {
   return (
     <div className="bg-[#E0F7FA] p-8 rounded-2xl w-full md:w-[400px]">
       <div className="flex items-center mb-4">
-        <Image src="/plane-icon.svg" alt="Plane" width={32} height={32} className="mr-2" />
+        <Image src="" alt="Plane" width={32} height={32} className="mr-2" />
         <h2 className="text-xl font-semibold">Get in touch</h2>
       </div>
       <form className="space-y-3" onSubmit={handleSubmit}>
@@ -80,7 +80,7 @@ export default function ContactForm() {
             className={`w-full p-2 pl-10 border rounded-md outline-none bg-[#F8FCFC] ${errors.email ? "border-red-500" : "border-[#B2DFDB]"}`}
           />
           <div className="absolute left-2 top-2.5">
-            <Image src="/email-icon.png" alt="Email Icon" width={20} height={20} />
+            <Image src="" alt="Email Icon" width={20} height={20} />
           </div>
           {errors.email && <p className="text-sm text-red-500 mt-1">{errors.email}</p>}
         </div>
@@ -95,7 +95,7 @@ export default function ContactForm() {
             className={`w-full p-2 pl-10 border rounded-md outline-none bg-[#F8FCFC] ${errors.phone ? "border-red-500" : "border-[#B2DFDB]"}`}
           />
           <div className="absolute left-2 top-2.5">
-            <Image src="/phone-icon.png" alt="Phone Icon" width={20} height={20} />
+            <Image src="" alt="Phone Icon" width={20} height={20} />
           </div>
           {errors.phone && <p className="text-sm text-red-500 mt-1">{errors.phone}</p>}
         </div>
@@ -110,7 +110,7 @@ export default function ContactForm() {
             rows={4}
           />
           <div className="absolute left-2 top-2.5">
-            <Image src="/message-icon.png" alt="Message Icon" width={20} height={20} />
+            <Image src="" alt="Message Icon" width={20} height={20} />
           </div>
           {errors.message && <p className="text-sm text-red-500 mt-1">{errors.message}</p>}
         </div>

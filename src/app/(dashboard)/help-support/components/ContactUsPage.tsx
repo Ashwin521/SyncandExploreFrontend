@@ -1,7 +1,7 @@
 "use client";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
-import SupportCards from "./SupportCards";
+// import SupportCards from "./SupportCards";
 
 export default function ContactUsPage() {
   return (
