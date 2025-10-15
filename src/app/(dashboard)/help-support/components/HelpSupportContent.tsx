@@ -72,7 +72,7 @@ export default function HelpSupportContent() {
               <h3 className="text-xl font-bold mb-4 text-gray-800">
                 Still have questions?
               </h3>
-              <ContactForm />
+              <ContactForm showPhone={false} />
             </div>
           </div>
         )}
